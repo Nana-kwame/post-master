@@ -1,0 +1,32 @@
+<div class="example-container">
+    <form class="example-container" [formGroup]="options">
+      <div>
+        <mat-label>Type of Delivery: </mat-label>
+        <mat-radio-group formControlName="floatLabel">
+          <mat-radio-button value="auto">Express</mat-radio-button>
+          <mat-radio-button value="always">Normal</mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </form>
+  
+    <mat-form-field
+        [hideRequiredMarker]="options.value.hideRequired"
+        [floatLabel]="options.value.floatLabel">
+      <input matInput placeholder="Pickup location" required>
+    </mat-form-field>
+  
+    <mat-form-field [floatLabel]="options.value.floatLabel">
+      <mat-label>Drop Of location</mat-label>
+      <input matInput placeholder="Dropof location" required>
+    </mat-form-field>
+  
+    <mat-form-field
+        [hideRequiredMarker]="options.value.hideRequired"
+        [floatLabel]="options.value.floatLabel">
+      <mat-select required>
+        <mat-option>-- None --</mat-option>
+        <mat-option value="option">Option</mat-option>
+      </mat-select>
+      <mat-placeholder> <i> placeholder</i></mat-placeholder>
+    </mat-form-field>
+  </div>
